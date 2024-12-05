@@ -1,0 +1,55 @@
+/* barraSuperior.css */
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-right: 8.13vw;
+  height: 70px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 70px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.clinic-name {
+  font-size: 1.5rem;
+  color: #789e94;
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  background-color: #99bbb2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* Remove o sublinhado do texto dos botões */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* .nav-button:hover {
+  background-color: rgb(85, 125, 112);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+} */
+
+.nav-button.active {
+  background-color: #67cfb4;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.323);
+}

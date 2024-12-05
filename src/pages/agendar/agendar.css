@@ -1,0 +1,22 @@
+/* agendar.css */
+
+.agendar-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.main-content {
+  flex: 1;
+  text-align: center;
+}
+
+.agendar-subcontainer {
+  background-image: url("../../assets/img-3.png");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}

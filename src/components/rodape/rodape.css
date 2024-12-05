@@ -1,0 +1,10 @@
+/* rodape.css */
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 50px;
+}

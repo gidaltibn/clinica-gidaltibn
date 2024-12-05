@@ -1,0 +1,50 @@
+/* exibeServico.css */
+.container-services {
+  display: flex;
+  background-color: #00000000;
+  width: 250px;
+}
+
+.exibe-servico {
+  width: 250px;
+  padding: 20px;
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 25%;
+}
+
+.imagem-container {
+  width: 100px;
+  height: 100px;
+  background-color: #99bbb2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.servico-imagem {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.servico-nome {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.servico-descricao {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
