@@ -1,0 +1,15 @@
+.campo-texto {
+  width: 100%;
+  padding: 10px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+  margin: 3px;
+}
+
+.campo-texto:focus {
+  border: 1px solid #5b5eff;
+  outline: none;
+}
