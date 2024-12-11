@@ -4,6 +4,7 @@ import Home from "../pages/home";
 import ServicosScreen from "../pages/servicos";
 import Agendar from "../pages/agendar";
 import Contato from "../pages/contato";
+import LoginScreen from "../pages/login";
 
 const Rotas = () => (
   // Altere "AppRoutes" para "Rotas"
@@ -12,6 +13,7 @@ const Rotas = () => (
     <Route path="/servicos" element={<ServicosScreen />} />
     <Route path="/agendar" element={<Agendar />} />
     <Route path="/contato" element={<Contato />} />
+    <Route path="/login" element={<LoginScreen />} />
   </Routes>
 );
 

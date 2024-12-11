@@ -24,7 +24,7 @@
 .campos-container {
   display: flex;
   flex-direction: row;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   min-width: 60vw;
   height: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -42,7 +42,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
+  margin: 10px;
+  width: 50%;
 }
 
 .texto-container h1 {
@@ -53,13 +54,149 @@
   color: #348662;
 }
 
-.campos-agendar {
+.container-intermediario {
   display: flex;
-  width: 60%;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container-agendar {
+  justify-content: space-between;
+  margin: 10px;
+  width: 50%;
   height: 90%;
+}
+
+.campos-agendar {
+  padding: 2px;
   flex-direction: column;
+  margin: 10px;
+  width: 50%;
+  height: 60%;
+}
+
+/* CSS para o botão 'Solicitar Agendamento' */
+.botao-agendar {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #348662; /* Cor verde escura */
+  color: #ffffff; /* Cor do texto branco */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-agendar:hover {
+  background-color: #2d7558; /* Cor verde escura ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS para o botão 'Visualizar seus agendamentos' */
+.botao-visualiza-agendamentos {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #99bbb2; /* Cor verde clara */
+  color: #ffffff; /* Cor do texto branco */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 10px;
+}
+
+.botao-visualiza-agendamentos:hover {
+  background-color: #88a89e; /* Cor mais escura ao passar o mouse */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  background-color: #f5f5f5;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #f7f7f7; /* Fundo cinza claro */
+  width: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative; /* Para posicionar o botão de fechar */
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhamento à esquerda */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-header img {
+  width: 40px; /* Ícone ajustado */
+  height: 40px;
+}
+
+.modal-header h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.modal-body {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: left; /* Texto alinhado à esquerda */
+  margin-bottom: 20px;
+}
+
+.modal-footer .botao-fechar {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-footer .botao-fechar:hover {
+  background-color: #d6d6d6;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #ff4d4d;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #e60000;
 }
