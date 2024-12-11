@@ -13,3 +13,27 @@
   border: 1px solid #5b5eff;
   outline: none;
 }
+
+
+.campo-texto-multilinhas {
+  width: 90%;
+  min-height: 150px; /* Altura mínima */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  text-align: left;
+}
+
+.campo-texto-multilinhas:focus {
+  border-color: #5b5eff;
+  outline: none;
+}
+
+.campo-texto-multilinhas[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: #999;
+}
