@@ -107,8 +107,6 @@ A estrutura do projeto está organizada da seguinte forma:
 
 - **React.js**: Biblioteca principal para construção da interface.
 - **React Router**: Gerenciamento de rotas da aplicação.
-- **React Icons**: Ícones reutilizáveis.
-- **React Input Mask**: Aplicação de máscaras nos campos de entrada.
 - **Local Storage**: Armazenamento de dados local para simulação de persistência.
 
 ---
@@ -140,6 +138,14 @@ A estrutura do projeto está organizada da seguinte forma:
    ```
 
 5. Acesse a aplicação no navegador em: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Protótipo no Figma
+
+O protótipo detalhado da aplicação está disponível no link abaixo:
+
+[Protótipo no Figma](<https://www.figma.com/design/Vx3vbhJldnFuXP0cf9qIuA/Cl%C3%ADnica-Gidalti-BN-(Community)?node-id=0-1&t=d18ysPPwd2RLGebG-1>)
 
 ---
 
