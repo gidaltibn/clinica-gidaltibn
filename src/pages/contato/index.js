@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BarraSuperior from "../../components/barraSuperior";
 import Rodape from "../../components/rodape";
 import CampoTexto from "../../components/campoTexto";
@@ -8,11 +8,22 @@ import colors from "../../assets/colors";
 import "./contato.css";
 
 const ContatoScreen = () => {
-  const [email, setEmail] = React.useState("");
-  const [telefone, setTelefone] = React.useState("");
-  const [nome, setNome] = React.useState("");
-  const [assunto, setAssunto] = React.useState("");
-  const [mensagem, setMensagem] = React.useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [nome, setNome] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
+  const handleSubmeter = () => {
+    if (!nome || !telefone || !email || !assunto || !mensagem) {
+      alert("Por favor, preencha todos os campos antes de enviar.");
+      return;
+    }
+
+    alert("Mensagem enviada com sucesso!");
+
+    window.location.reload();
+  };
 
   return (
     <div className="container" style={{ background: colors.background }}>
@@ -29,9 +40,7 @@ const ContatoScreen = () => {
             <p style={{ marginBottom: 0 }}>
               📍 Av. Getúlio Vargas, 5000, São Luís, Maranhão
             </p>
-
             <p style={{ marginBottom: 0 }}>📧 contato@clinicagidaltibn.com</p>
-
             <p style={{ marginBottom: 0 }}>📞 +55 98 9 8877 6655</p>
           </div>
 
@@ -71,9 +80,7 @@ const ContatoScreen = () => {
             />
             <button
               className="botao-visualiza-agendamentos"
-              onClick={() => {
-                window.location.href = "/agendar";
-              }}
+              onClick={handleSubmeter}
             >
               Submeter
             </button>

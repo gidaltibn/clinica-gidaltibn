@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+# Clínica Gidalti BN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o Projeto
 
-## Available Scripts
+Este projeto é o MVP do módulo 3 da pós-graduação em desenvolvimento full stack da **PUC do Rio de Janeiro**. O objetivo é criar uma aplicação funcional com front-end em React para simular o sistema de agendamento e gerenciamento de consultas de uma clínica fictícia.
 
-In the project directory, you can run:
+A aplicação inclui funcionalidades como:
 
-### `npm start`
+- Agendamento de consultas.
+- Exibição de agendamentos filtrados por usuário.
+- Formulário de contato com validação de dados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estrutura do Projeto
 
-### `npm test`
+A estrutura do projeto está organizada da seguinte forma:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+📦 src
+├── assets
+│   ├── colors.js                 # Paleta de cores da aplicação.
+│   ├── fisio-button.png          # Imagem de botão de Fisioterapia.
+│   ├── fono-button.png           # Imagem de botão de Fonoaudiologia.
+│   ├── logo-clinica.png          # Logo da clínica.
+│   ├── neuro-button.png          # Imagem de botão de Neurologia.
+│   └── ped-button.png            # Imagem de botão de Pediatria.
+│
+├── components
+│   ├── barraSuperior             # Componente do cabeçalho.
+│   │   └── index.js
+│   ├── botao                     # Botões reutilizáveis.
+│   │   └── index.js
+│   ├── campoComboBox             # ComboBox para selecionar especialidades.
+│   │   └── index.js
+│   ├── campoData                 # Campo de entrada para datas.
+│   │   └── index.js
+│   ├── campoHorario              # Campo de entrada para horários.
+│   │   └── index.js
+│   ├── campoTelefone             # Campo de entrada para números de telefone com máscara.
+│   │   └── index.js
+│   ├── campoTexto                # Campo de entrada de texto simples.
+│   │   └── index.js
+│   ├── campoTextoMultilinhas     # Campo para mensagens de múltiplas linhas.
+│   │   └── index.js
+│   ├── card                      # Cartões de exibição de especialidades.
+│   │   └── index.js
+│   ├── exibeServico              # Componente para exibir especialidades com detalhes.
+│   │   └── index.js
+│   └── rodape                    # Rodapé do site.
+│       └── index.js
+│
+├── datas
+│   └── DadosEspecialidades.js    # Dados estáticos das especialidades médicas.
+│
+├── pages
+│   ├── agendamentos              # Tela de exibição de agendamentos.
+│   │   └── index.js
+│   ├── agendar                   # Tela de agendamento de consultas.
+│   │   └── index.js
+│   ├── contato                   # Tela de contato com a clínica.
+│   │   └── index.js
+│   ├── home                      # Tela inicial da aplicação.
+│   │   └── index.js
+│   ├── login                     # Tela de login de usuários.
+│   │   └── index.js
+│   └── servicos                  # Tela de serviços oferecidos.
+│       └── index.js
+│
+├── routes
+│   └── index.js                  # Configuração das rotas da aplicação.
+│
+├── App.js                        # Componente principal da aplicação.
+├── App.css                       # Estilos globais da aplicação.
+└── index.js                      # Ponto de entrada do React.
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Tela de Agendamento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Permite o preenchimento dos campos de agendamento (nome, telefone, email, especialidade, data e horário).
+- Valida os dados antes do envio.
+- Salva os dados no Local Storage com o status inicial "Em análise".
 
-### `npm run eject`
+### 2. Tela de Agendamentos
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Exibe os agendamentos filtrados por email do usuário.
+- Os dados são carregados do Local Storage.
+- Mostra o status de cada agendamento com cores indicativas (Aprovado, Negado, Em Análise, Realizado).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Tela de Login
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Permite o login utilizando nome e email.
+- Valida se o email possui agendamentos salvos e redireciona para a tela de agendamentos.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 4. Tela de Contato
 
-## Learn More
+- Formulário para envio de mensagens à clínica.
+- Mostra um alerta de sucesso ao enviar a mensagem e recarrega a página.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tecnologias Utilizadas
 
-### Code Splitting
+- **React.js**: Biblioteca principal para construção da interface.
+- **React Router**: Gerenciamento de rotas da aplicação.
+- **React Icons**: Ícones reutilizáveis.
+- **React Input Mask**: Aplicação de máscaras nos campos de entrada.
+- **Local Storage**: Armazenamento de dados local para simulação de persistência.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Como Executar o Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Clone o repositório:
 
-### Making a Progressive Web App
+   ```bash
+   git clone https://github.com/gidaltibn/clinica-gidaltibn.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Acesse o diretório do projeto:
 
-### Advanced Configuration
+   ```bash
+   cd clinica-gidaltibn
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Instale as dependências:
 
-### Deployment
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. Execute o projeto:
 
-### `npm run build` fails to minify
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Acesse a aplicação no navegador em: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## Observação Importante
+
+Este projeto foi desenvolvido como parte do módulo 3 da pós-graduação em Desenvolvimento Full Stack da **PUC-Rio**. É um MVP (Produto Mínimo Viável) focado no aprendizado de React, componentização, e gerenciamento de estados.
+
+---
+
+## Autor
+
+Gidalti Brito Nascimento

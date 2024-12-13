@@ -1,41 +1,45 @@
 import React from "react";
+import InputMask from "react-input-mask";
 import "../cssCampoTexto/camposTexto.css";
 
 function CampoHorario({ placeholder, valor, setValor }) {
   const handleChange = (event) => {
     let value = event.target.value;
-    // Remove qualquer caractere que não seja número
-    value = value.replace(/[^0-9]/g, "");
 
-    // Formata para o formato HH:MM
-    if (value.length <= 2) {
-      value = value;
-    } else {
-      value = `${value.slice(0, 2)}:${value.slice(2, 4)}`;
-    }
-
-    // Limita o valor de horas e minutos
-    if (value.length === 5) {
+    // Verifica se está no formato HH:MM e valida o valor
+    if (/^\d{2}:\d{2}$/.test(value)) {
       const [horas, minutos] = value.split(":");
-      if (parseInt(horas, 10) > 23) {
-        value = "23:" + minutos;
-      }
-      if (parseInt(minutos, 10) > 59) {
-        value = horas + ":59";
-      }
+
+      // Limita horas e minutos aos valores válidos
+      const horasValidadas = Math.min(parseInt(horas, 10), 23)
+        .toString()
+        .padStart(2, "0");
+      const minutosValidados = Math.min(parseInt(minutos, 10), 59)
+        .toString()
+        .padStart(2, "0");
+
+      value = `${horasValidadas}:${minutosValidados}`;
     }
 
     setValor(value);
   };
 
   return (
-    <input
-      type="text"
-      placeholder={placeholder}
+    <InputMask
+      mask="99:99"
       value={valor}
       onChange={handleChange}
-      className="campo-texto"
-    />
+      maskPlaceholder={null} // Remove placeholders como "_"
+    >
+      {(inputProps) => (
+        <input
+          {...inputProps}
+          type="text"
+          placeholder={placeholder}
+          className="campo-texto"
+        />
+      )}
+    </InputMask>
   );
 }
 

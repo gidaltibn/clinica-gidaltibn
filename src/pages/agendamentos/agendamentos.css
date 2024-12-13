@@ -1,0 +1,61 @@
+.agendamentos-container {
+  display: flex;
+  height: 70vh;
+  width: 84vw;
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 1%;
+}
+
+.info-usuario-container {
+  height: 100%;
+  width: 20%;
+  text-align: left;
+  padding-top: 5%;
+}
+
+
+
+.botao-agendar-container {
+  height: 100%;
+  width: 20%;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.tabela-agendamentos-container {
+    height: 80%;
+    width: 70%;
+    text-align: left;
+  }
+  
+  .tabela-agendamentos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  .tabela-agendamentos th,
+  .tabela-agendamentos td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Espaçamento interno de cada célula */
+    text-align: left;
+  }
+  
+  .tabela-agendamentos th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .tabela-agendamentos td {
+    background-color: #fff;
+  }
+  
+  .tabela-agendamentos tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabela-agendamentos tr:hover {
+    background-color: #f1f1f1;
+  }
+  
